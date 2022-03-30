@@ -1,8 +1,42 @@
-h1 {
-  background-color: red;
+body {
+  background-color: #8f6749;
+  background: url("pictures/the_mineshaft.jpg") no-repeat cover;
+}
+
+.banner {
+  border-top: 0px;
+  float: none;
+  margin: auto 11em;
+}
+
+#nav {
+  font-size: xx-large;
+  margin: auto 7.5em;
+}
+
+a {
+  padding: 0.25em 0.5em;
+  color: white;
+  text-decoration: none;
+}
+
+.unselected {
+  background-color: #333;
+}
+
+.selected {
+  background-color: gray;
+}
+
+h3 {
   text-align: center;
 }
 
-#output {
-  font-size: 100px;
+#main {
+  margin: auto 10em;
+  background-color: gray;
+}
+
+.contact {
+  margin-left: 20em;
 }
