@@ -18,10 +18,11 @@ canvas {
   margin: auto;
 }
 
-a {
+a, .link_to {
   padding: 0.5vw 1vw;
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .unselected {

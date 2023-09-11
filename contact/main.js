@@ -1,0 +1,6 @@
+const invoice = "lnbc1pj07qxwpp5uz3t9z35unhq3hmdvf37x2n0wsg8725l3407n2qdd364v43g0ymshp5dxxwlquenqn2y9xma662gzsqtgtrg8007hd98yvp3g4dxhxe5lrscqzysxqyz5vqsp5ns04xh4t8wu56u799z2kufcyf3wf6m47j0zx8q96uxut5wysxnlq9qyyssqltzvt9wmhn68y28py8rngnklfkylxcj5836wxjn2np3mqk32sren5p6m4ufnwru7yp3tuettmj3ng0dvxhm5uqg3xff8usjg9d8peugpw2csue";
+
+function copyInvoice() {
+  navigator.clipboard.writeText(invoice);
+  alert("copied!");
+}
