@@ -11,6 +11,10 @@ pre {
   background-color: #606060;
 }
 
+h1 {
+  text-align: center;
+}
+
 .banner {
   display: block;
   width: 50vw;
