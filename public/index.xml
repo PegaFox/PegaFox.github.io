@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Mineshaft</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on The Mineshaft</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Jul 2025 17:48:00 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Custom_3D_engine_part_1_projection</title>
+      <link>http://localhost:1313/articles/custom_3d_engine_part_1_projection/</link>
+      <pubDate>Mon, 21 Jul 2025 17:48:00 -0400</pubDate>
+      <guid>http://localhost:1313/articles/custom_3d_engine_part_1_projection/</guid>
+      <description>&lt;h2 id=&#34;custom-3d-engine---part-1-projection&#34;&gt;Custom 3D engine - part 1: Projection&lt;/h2&gt;&#xA;&lt;h3 id=&#34;is-this-a-good-idea&#34;&gt;Is this a good idea?&lt;/h3&gt;</description>
+    </item>
+    <item>
+      <title>Cpp_file_handling</title>
+      <link>http://localhost:1313/articles/cpp_file_handling/</link>
+      <pubDate>Mon, 21 Jul 2025 17:47:17 -0400</pubDate>
+      <guid>http://localhost:1313/articles/cpp_file_handling/</guid>
+      <description>&lt;h2 id=&#34;c-file-handling&#34;&gt;C++ File Handling&lt;/h2&gt;&#xA;&lt;p&gt;Over the years, I&amp;rsquo;ve seen many tutorials on how to handle files in C++, but they always seem to have something missing. They might not explain filebufs, or ignore binary file handling, so with this article I aim to explain everything I have learned about how to use files in C++&lt;/p&gt;&#xA;&lt;h3 id=&#34;basic-string-io&#34;&gt;Basic string I/O&lt;/h3&gt;&#xA;&lt;p&gt;Here we will be using the fstream class, which requires you to include the fstream library&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Videos</title>
+      <link>http://localhost:1313/videos/</link>
+      <pubDate>Mon, 21 Jul 2025 17:46:37 -0400</pubDate>
+      <guid>http://localhost:1313/videos/</guid>
+      <description>&lt;p&gt;Here I talk about how the circuits of a computer connect and the basics of how computers process data!&lt;/p&gt;&#xA;&lt;iframe src=&#34;https://www.youtube.com/embed/b7zmDnH2nks&#34;&gt;&lt;/iframe&gt;&#xA;&lt;p&gt;In this video, I explain how the different redstone components in minecraft work&lt;/p&gt;&#xA;&lt;iframe src=&#34;https://www.youtube.com/embed/4GWhyLnHM3Y&#34;&gt;&lt;/iframe&gt;</description>
+    </item>
+    <item>
+      <title>Projects</title>
+      <link>http://localhost:1313/projects/</link>
+      <pubDate>Mon, 21 Jul 2025 17:46:29 -0400</pubDate>
+      <guid>http://localhost:1313/projects/</guid>
+      <description>&lt;h3 id=&#34;orbit-simulator&#34;&gt;Orbit simulator&lt;/h3&gt;&#xA;&lt;p&gt;A 2 dimensional playground where you can create astral bodies and let them spin and collide!&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/PegaFox/solar-system-creator&#34;&gt;download&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Executable downloads on the way!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Mon, 21 Jul 2025 17:46:08 -0400</pubDate>
+      <guid>http://localhost:1313/contact/</guid>
+      <description>&lt;h3 id=&#34;social-media&#34;&gt;&lt;center&gt;Social media&lt;/center&gt;&lt;/h3&gt;&#xA;&lt;div class=&#34;contact&#34;&gt;&#xA;&lt;p&gt;Github:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/PegaFox&#34;&gt;github.com/pegafox&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Twitter:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://twitter.com/Pega_Fox&#34;&gt;@Pega_Fox&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Nostr ID: npub1wmrttee24frcxwjk3vd9gq6636fpxaeg29k906f5wv8kf83c6m4q5ug7d3&lt;/p&gt;&#xA;&lt;p&gt;Reddit:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.reddit.com/user/Pega_Fox&#34;&gt;u/Pega_Fox&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Itch.io:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://pegafox.itch.io&#34;&gt;pegafox.itch.io&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;h3 id=&#34;other-ways-to-contact-me&#34;&gt;&lt;center&gt;Other ways to contact me&lt;/center&gt;&lt;/h3&gt;&#xA;&lt;div class=&#34;contact&#34;&gt;&#xA;&lt;p&gt;Email:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;mailto:pegafox@protonmail.com&#34;&gt;pegafox@protonmail.com&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;h3 id=&#34;donate&#34;&gt;&lt;center&gt;Donate&lt;/center&gt;&lt;/h3&gt;&#xA;&lt;center&gt;If you&#39;ve gotten some value out of what I do, feel free to give a small donation in return.&lt;br&gt;This is currently the only way to donate.&lt;/center&gt;&#xA;&lt;div class=&#34;contact&#34;&gt;&#xA;&lt;p&gt;Bitcoin onchain: bc1q9ukrj9nljvdqsr6as4ckxjnuudr06ulrzfr2zz&lt;/p&gt;&#xA;&lt;p&gt;Bitcoin lightning address: &lt;a href=&#34;mailto:PegaFox@coinos.io&#34;&gt;PegaFox@coinos.io&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>
