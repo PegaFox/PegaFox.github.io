@@ -1,6 +1,6 @@
 +++
 date = '2025-07-21T17:46:37-04:00'
-draft = true
+draft = false
 title = 'Videos'
 +++
 

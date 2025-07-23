@@ -1,6 +1,6 @@
 +++
 date = '2025-07-21T17:47:17-04:00'
-draft = true
+draft = false
 title = 'Cpp_file_handling'
 +++
 

@@ -1,6 +1,6 @@
 +++
 date = '2025-07-21T16:54:39-04:00'
-draft = true
+draft = false
 title = 'The Mineshaft'
 +++
 
