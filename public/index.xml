@@ -6,8 +6,15 @@
     <description>Recent content on The Mineshaft</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Jul 2025 17:48:00 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 24 Jul 2025 09:38:41 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Credits</title>
+      <link>http://localhost:1313/credits/</link>
+      <pubDate>Thu, 24 Jul 2025 09:38:41 -0400</pubDate>
+      <guid>http://localhost:1313/credits/</guid>
+      <description>&lt;h3 id=&#34;credits&#34;&gt;&lt;center&gt;Credits&lt;/center&gt;&lt;/h3&gt;&#xA;&lt;p&gt;I felt I should compile the people and sources that have helped me throughout my journey of learning&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Everyone who helped introduce me to programming&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/c/SebastianLague&#34;&gt;Sebastian Lague&lt;/a&gt; for his coding adventures&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://lodev.org&#34;&gt;Lode Vandevenne&lt;/a&gt; for his graphics tutorials&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/c/3dsage&#34;&gt;3DSage&lt;/a&gt; for reigniting my curiosity for the inner workings of 3D rendering&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/@javidx9&#34;&gt;JavidX9&lt;/a&gt; for his intuitive explanations of 3D environments&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>Custom_3D_engine_part_1_projection</title>
       <link>http://localhost:1313/articles/custom_3d_engine_part_1_projection/</link>
