@@ -10,6 +10,14 @@ Hello! I'm Jason, a programmer and freelancer. I like making games, backend syst
 
 ### Recent updates
 
+#### 29th-July-2025: Well that was fast
+
+Well would you look at that! I managed to add an update only... Hang on let me check...
+
+Five days after the last one! I'm definitely rewarding myself for that! (Though I wouldn't count on another update any time soon) Anyway, I've added something to the projects tab and might be adding a few more in the near future. A large part of why I made this website is so I could have an easily customizable portfolio, so I want to fill out that page as much as I can!
+
+I also hope to make more articles soon, I have a few in my head about graphical rendering techniques or maybe how computers work at the lowest level, but you will just have to wait and see if I ever decide to make them. Toodles!
+
 #### 24th-July-2025: A return
 
 Guess Who? That's right, after my previous update, I dropped into a coma* for a year and just now decided to wake up long enough to make a small update to the site. I have added a credits/acknowledgement page for all the people I can think of who have taught me something of value! I would love to say that I'll be updating the website more frequently, but entering an unconscious stupor can be quite unpredictable, so you will just have to check back in a year or so to see if I remembered to update this. Till tomorrow's destiny everyone!
