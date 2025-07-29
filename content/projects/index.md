@@ -6,7 +6,7 @@ title = 'Projects'
 
 <style>
 
-img {
+.flexbox img {
   margin: 0.2rem;
   max-width: 25.0rem;
 }
