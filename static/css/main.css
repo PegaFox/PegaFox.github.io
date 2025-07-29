@@ -51,6 +51,10 @@ a, .link_to {
   margin-left: 20em;
 }
 
+.flexbox {
+  display: flex;
+}
+
 iframe {
   width: 77vw;
   height: 44vw;
