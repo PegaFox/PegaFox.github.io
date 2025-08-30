@@ -2,6 +2,8 @@ body {
   background-color: #8f6749;
   background: url("images/the_mineshaft.jpg") no-repeat cover;
   margin: 0px;
+
+  font-family: sans-serif;
 }
 
 canvas {
