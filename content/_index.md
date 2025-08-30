@@ -10,6 +10,10 @@ Hello! I'm Jason, a programmer and freelancer. I like making games, backend syst
 
 ### Recent updates
 
+#### 30th-August-2025: Blog addition
+
+Here's our favorite ~daily~ ~weekly~ ~monthly~ ~yearly~ occasional website update! Don't you love when a poor little article comes to our door, huddled in the rain, using a newspaper for a blanket? Well, regardless of what you just said, it's happened! I've started a general blog section in the articles tab, and I'll be putting general updates on what I've been doing in there. As always, I make no promises on the frequency of said updates, but I'm sure you'll find them eventually! See you then!
+
 #### 29th-July-2025: Well that was fast
 
 Well would you look at that! I managed to add an update only... Hang on let me check...
