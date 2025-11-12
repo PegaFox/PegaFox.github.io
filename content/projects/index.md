@@ -40,3 +40,13 @@ A 2 dimensional playground where you can create astral bodies and let them spin 
 [download](https://github.com/PegaFox/solar-system-creator)
 
 Executable downloads on the way!
+
+## Games
+
+### Robot Turtles Creator
+
+Hybrid educational puzzle game and logic simulator based off of board game Robot Turtles.
+
+[demo](https://github.com/PegaFox/solar-system-creator)
+
+The full game is available for 3.00$

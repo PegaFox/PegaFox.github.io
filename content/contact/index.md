@@ -40,7 +40,7 @@ Email:
 
 ### <center>Donate</center>
 
-<center>If you've gotten some value out of what I do, feel free to give a small donation in return.<br>This is currently the only way to donate.</center>
+<center>If you've gotten some value out of what I do, feel free to give a small donation in return.<br>Feel free to contact me if you would like me to add an alternative payment option</center>
 
 <div class="contact">
 

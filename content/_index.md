@@ -10,6 +10,16 @@ Hello! I'm Jason, a programmer and freelancer. I like making games, backend syst
 
 ### Recent updates
 
+#### 12th-November-2025: Robot Turtles Creator release
+
+Hello again! This was actually faster than I expected. I've made a new game/simulation and posted it on the projects tab and [itch.io](https://pegafox.itch.io/robot-turtles-creator-demo). The full version is available for a small price or you can reverse engineer the demo to allow for INFINITE RESOURCES!!!!
+
+Um, anyway. That's the update! Sorry there wasn't much more, I might make an article about challenges I ran into while making the game, but at time of writing I'm not working on that.
+
+Well, as usual, see you later*!
+
+<sub>*Statement used as a turn of phrase only, PegaFox can neither confirm nor deny if or when he may or may not update this website in the future</sub>
+
 #### 30th-August-2025: Blog addition
 
 Here's our favorite ~daily~ ~weekly~ ~monthly~ ~yearly~ occasional website update! Don't you love when a poor little article comes to our door, huddled in the rain, using a newspaper for a blanket? Well, regardless of what you just said, it's happened! I've started a general blog section in the articles tab, and I'll be putting general updates on what I've been doing in there. As always, I make no promises on the frequency of said updates, but I'm sure you'll find them eventually! See you then!
