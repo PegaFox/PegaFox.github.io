@@ -10,6 +10,12 @@ Hello! I'm Jason, a programmer and freelancer. I like making games, backend syst
 
 ### Recent updates
 
+#### 17th-January-2026: Robot Turtles Creator is now free!
+
+Also I fixed the link. Anyway, due to the whole "copyrighted brand" thing, I can't charge money for robot turtles related software. But not to worry! I still plan on working on and updating the program! I've also updated my donation options slightly (in case you felt the urge to help me out a bit wink wink). Feel free to contact me any questions you may have about the content on this website, and I'll see you later!
+
+PS: Also happy new year I guess. Chances are next time we talk I'll be wishing you happy new year again, but who knows? Anthyding can hadplen!
+
 #### 12th-November-2025: Robot Turtles Creator release
 
 Hello again! This was actually faster than I expected. I've made a new game/simulation and posted it on the projects tab and [itch.io](https://pegafox.itch.io/robot-turtles-creator-demo). The full version is available for a small price or you can reverse engineer the demo to allow for INFINITE RESOURCES!!!!

@@ -47,6 +47,6 @@ Executable downloads on the way!
 
 Hybrid educational puzzle game and logic simulator based off of board game Robot Turtles.
 
-[demo](https://github.com/PegaFox/solar-system-creator)
+[beta](https://pegafox.itch.io/robot-turtles-creator)
 
-The full game is available for 3.00$
+I've put a lot of work into this project, so any and all donations are appreciated!

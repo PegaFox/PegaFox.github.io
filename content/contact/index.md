@@ -46,6 +46,6 @@ Email:
 
 Bitcoin onchain: bc1q9ukrj9nljvdqsr6as4ckxjnuudr06ulrzfr2zz
 
-Bitcoin lightning address: PegaFox@coinos.io
+Bitcoin lightning address: pegafox@mannabitcoin.com
 
 </div>
