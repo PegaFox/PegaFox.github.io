@@ -43,6 +43,16 @@ Executable downloads on the way!
 
 ## Games
 
+### Mission Bitcoin
+
+Fun digital board game that teaches people about safely using bitcoin, now with web support!
+
+[beta](mission_bitcoin)
+
+If there's enough* demand, I'll set up an itch.io page for binary downloads too!
+
+*Read: any
+
 ### Robot Turtles Creator
 
 Hybrid educational puzzle game and logic simulator based off of board game Robot Turtles.

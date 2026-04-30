@@ -10,6 +10,20 @@ Hello! I'm Jason, a programmer and freelancer. I like making games, backend syst
 
 ### Recent updates
 
+#### 30th-April-2026: Mission Bitcoin annoucement
+
+Like the last piece of mud stuck to an equally disgusting foot in the shower, I *shlique* myself out of my resting place to bring you a brand new update to your at-least-in-the-top-1000 website!
+
+This year it's the digital version of Mission Bitcoin, a family board game that helps teach financial literacy! You may have already found out about this if you've been keeping track of the commits to this website's repository. If so, what are you some sort of creep? Weirdo? Oddball? Nosy Nancy?* Don't get me wrong, I'm impressed, but wow, what kind of person are you?
+
+Anyway, tangents aside, I'm going through a mite of programmer's block right now so I will likely end up making more content for the site soon! Maybe I'll update robot turtles creator, maybe I'll upload another Zig article, or even an article about the production of mission bitcoin, but if I don't then too bad! I didn't sign anything so I don't have to do it.
+
+Anyway, see you around!
+
+PS: And if you are new here, thanks for coming! There's a decent chance I'll never update this site again, but if you want to take a chance, check later!
+
+*No offense to anyone named Nancy
+
 #### 17th-January-2026: Robot Turtles Creator is now free!
 
 Also I fixed the link. Anyway, due to the whole "copyrighted brand" thing, I can't charge money for robot turtles related software. But not to worry! I still plan on working on and updating the program! I've also updated my donation options slightly (in case you felt the urge to help me out a bit wink wink). Feel free to contact me any questions you may have about the content on this website, and I'll see you later!
