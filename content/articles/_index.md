@@ -10,4 +10,7 @@ Here I explain different methods for file I/O
 
 ## Blogposts
 
-## [Issue 1: Trying out Zig with a roguelike project](./blog/issue_1)
+## [Issue 1: Trying out Zig with a roguelike project](./blog/issue_1_trying_zig)
+
+## [Issue 2: To mod, or not to mod](./blog/issue_2_modding_thoughts)
+
