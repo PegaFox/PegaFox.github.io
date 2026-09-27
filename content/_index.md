@@ -10,6 +10,18 @@ Hello! I'm Jason, a programmer and freelancer. I like making games, backend syst
 
 ### Recent updates
 
+#### 27th-(...What month is it? Oh right)September-2026: Mission bitcoin updates
+
+Well, Fee Fie Foe Fum everyone! Good to be here again, this time only five(5) months since the previous update! To be fair, I don't have too much to announce just now, but I wanted to type here so you had better enjoy it!
+
+First of all, Mission Bitcoin has had several updates! Including several bugfixes, multiplayer support for desktop builds (stay tuned web fellows, you're next!), and, due to popular demand, notice windows that help immersion and explain what certain elements of the game mean as they happen!
+
+Second of all... I have nothing else to share! I'm board though, so for some bonus info, I've been primarily working on my roguelike engine/game *The Broken Fractal*! (And trying to get a job, lol) I hope to get the first level to a good state and release that as a demo, so stay tuned for that!
+
+Let's see, what else to talk about... As always, I can't guarantee when I'll update this next, so if you want to make sure I'm alive, use one of the links on the [contact](./contact) page to check.
+
+Feel free to reread this if you get bored while waiting for an update! Sayonara!
+
 #### 30th-April-2026: Mission Bitcoin annoucement
 
 Like the last piece of mud stuck to an equally disgusting foot in the shower, I *shlique* myself out of my resting place to bring you a brand new update to your at-least-in-the-top-1000 website!
