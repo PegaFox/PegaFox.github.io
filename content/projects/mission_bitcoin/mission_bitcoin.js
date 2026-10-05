@@ -480,6 +480,8 @@ var
 
 var runtimeInitialized = false;
 
+var runtimeExited = false;
+
 
 
 function updateMemoryViews() {
@@ -539,6 +541,19 @@ function preMain() {
   // No ATMAINS hooks
 }
 
+function exitRuntime() {
+  assert(!runtimeExited);
+  checkStackCookie();
+   // PThreads reuse the runtime from the main thread.
+  ___funcs_on_exit(); // Native atexit() functions
+  // Begin ATEXITS hooks
+  callRuntimeCallbacks(onExits);
+FS.quit();
+TTY.shutdown();
+  // End ATEXITS hooks
+  runtimeExited = true;
+}
+
 function postRun() {
   checkStackCookie();
    // PThreads reuse the runtime from the main thread.
@@ -592,6 +607,7 @@ function abort(what) {
 function createExportWrapper(name, nargs) {
   return (...args) => {
     assert(runtimeInitialized, `native function \`${name}\` called before runtime initialization`);
+    assert(!runtimeExited, `native function \`${name}\` called after runtime exit (use NO_EXIT_RUNTIME to keep it alive after main() exits)`);
     var f = wasmExports[name];
     assert(f, `exported native function \`${name}\` not found`);
     // Only assert for too many arguments. Too few can be valid since the missing arguments will be zero filled.
@@ -858,7 +874,7 @@ async function createWasm() {
     }
   }
 
-  var noExitRuntime = true;
+  var noExitRuntime = false;
 
   var ptrToString = (ptr) => {
       assert(typeof ptr === 'number', `ptrToString expects a number, got ${typeof ptr}`);
@@ -5458,6 +5474,10 @@ var findStringEnd = (heapOrArray, idx, maxBytesToRead, ignoreNul) => {
   var _emscripten_asm_const_ptr_sync_on_main_thread = (emAsmAddr, sigPtr, argbuf) => runMainThreadEmAsm(emAsmAddr, sigPtr, argbuf, 1);
 
   
+  
+  var runtimeKeepalivePush = () => {
+      runtimeKeepaliveCounter += 1;
+    };
   var _emscripten_set_main_loop_timing = (mode, value) => {
       MainLoop.timingMode = mode;
       MainLoop.timingValue = value;
@@ -5468,7 +5488,7 @@ var findStringEnd = (heapOrArray, idx, maxBytesToRead, ignoreNul) => {
       }
   
       if (!MainLoop.running) {
-        
+        runtimeKeepalivePush();
         MainLoop.running = true;
       }
       if (mode == 0) {
@@ -5533,7 +5553,9 @@ var findStringEnd = (heapOrArray, idx, maxBytesToRead, ignoreNul) => {
   var exitJS = (status, implicit) => {
       EXITSTATUS = status;
   
-      checkUnflushedContent();
+      if (!keepRuntimeAlive()) {
+        exitRuntime();
+      }
   
       // if exit() was called explicitly, warn the user if the runtime isn't actually being shut down
       if (keepRuntimeAlive() && !implicit) {
@@ -5564,6 +5586,9 @@ var findStringEnd = (heapOrArray, idx, maxBytesToRead, ignoreNul) => {
     };
   
   var maybeExit = () => {
+      if (runtimeExited) {
+        return;
+      }
       if (!keepRuntimeAlive()) {
         try {
           _exit(EXITSTATUS);
@@ -5571,6 +5596,11 @@ var findStringEnd = (heapOrArray, idx, maxBytesToRead, ignoreNul) => {
           handleException(e);
         }
       }
+    };
+  
+  var runtimeKeepalivePop = () => {
+      assert(runtimeKeepaliveCounter > 0);
+      runtimeKeepaliveCounter -= 1;
     };
   
     /**
@@ -5585,7 +5615,7 @@ var findStringEnd = (heapOrArray, idx, maxBytesToRead, ignoreNul) => {
       var thisMainLoopId = MainLoop.currentlyRunningMainloop;
       function checkIsRunning() {
         if (thisMainLoopId < MainLoop.currentlyRunningMainloop) {
-          
+          runtimeKeepalivePop();
           maybeExit();
           return false;
         }
@@ -5666,7 +5696,7 @@ var findStringEnd = (heapOrArray, idx, maxBytesToRead, ignoreNul) => {
   
   
   var callUserCallback = (func) => {
-      if (ABORT) {
+      if (runtimeExited || ABORT) {
         err('user callback triggered after runtime exited or application aborted.  Ignoring.');
         return;
       }
@@ -5779,6 +5809,12 @@ var findStringEnd = (heapOrArray, idx, maxBytesToRead, ignoreNul) => {
         }
         JSEvents.deferredCalls = [];
       },
+  registerRemoveEventListeners() {
+        if (!JSEvents.removeEventListenersRegistered) {
+          addOnExit(JSEvents.removeAllEventListeners);
+          JSEvents.removeEventListenersRegistered = true;
+        }
+      },
   inEventHandler:0,
   deferredCalls:[],
   deferCall(targetFunction, precedence, argsList) {
@@ -5868,6 +5904,7 @@ var findStringEnd = (heapOrArray, idx, maxBytesToRead, ignoreNul) => {
                                                eventHandler.eventListenerFunc,
                                                eventHandler.useCapture);
           JSEvents.eventHandlers.push(eventHandler);
+          JSEvents.registerRemoveEventListeners();
         } else {
           for (var i = 0; i < JSEvents.eventHandlers.length; ++i) {
             if (JSEvents.eventHandlers[i].target == eventHandler.target
@@ -6293,11 +6330,13 @@ var findStringEnd = (heapOrArray, idx, maxBytesToRead, ignoreNul) => {
 
   
   
+  
+  
   /** @param {number=} timeout */
   var safeSetTimeout = (func, timeout) => {
-      
+      runtimeKeepalivePush();
       return setTimeout(() => {
-        
+        runtimeKeepalivePop();
         callUserCallback(func);
       }, timeout);
     };
@@ -9995,8 +10034,6 @@ if (Module['wasmBinary']) wasmBinary = Module['wasmBinary'];
   'createNamedFunction',
   'withStackSave',
   'getDynCaller',
-  'runtimeKeepalivePush',
-  'runtimeKeepalivePop',
   'asmjsMangle',
   'HandleAllocator',
   'addOnInit',
@@ -10128,6 +10165,8 @@ missingLibrarySymbols.forEach(missingLibrarySymbol)
   'dynCall',
   'handleException',
   'keepRuntimeAlive',
+  'runtimeKeepalivePush',
+  'runtimeKeepalivePop',
   'callUserCallback',
   'maybeExit',
   'asyncLoad',
@@ -10486,6 +10525,7 @@ var _Emscripten_SendDragFileEvent = Module['_Emscripten_SendDragFileEvent'] = ma
 var _Emscripten_HandleLockKeysCheck = Module['_Emscripten_HandleLockKeysCheck'] = makeInvalidEarlyAccess('_Emscripten_HandleLockKeysCheck');
 var _Emscripten_SendSystemThemeChangedEvent = Module['_Emscripten_SendSystemThemeChangedEvent'] = makeInvalidEarlyAccess('_Emscripten_SendSystemThemeChangedEvent');
 var _requestFullscreenThroughSDL = Module['_requestFullscreenThroughSDL'] = makeInvalidEarlyAccess('_requestFullscreenThroughSDL');
+var ___funcs_on_exit = makeInvalidEarlyAccess('___funcs_on_exit');
 var _emscripten_stack_get_end = makeInvalidEarlyAccess('_emscripten_stack_get_end');
 var _emscripten_stack_get_base = makeInvalidEarlyAccess('_emscripten_stack_get_base');
 var _htonl = makeInvalidEarlyAccess('_htonl');
@@ -10527,6 +10567,7 @@ function assignWasmExports(wasmExports) {
   assert(typeof wasmExports['Emscripten_HandleLockKeysCheck'] != 'undefined', 'missing Wasm export: Emscripten_HandleLockKeysCheck');
   assert(typeof wasmExports['Emscripten_SendSystemThemeChangedEvent'] != 'undefined', 'missing Wasm export: Emscripten_SendSystemThemeChangedEvent');
   assert(typeof wasmExports['requestFullscreenThroughSDL'] != 'undefined', 'missing Wasm export: requestFullscreenThroughSDL');
+  assert(typeof wasmExports['__funcs_on_exit'] != 'undefined', 'missing Wasm export: __funcs_on_exit');
   assert(typeof wasmExports['emscripten_stack_get_end'] != 'undefined', 'missing Wasm export: emscripten_stack_get_end');
   assert(typeof wasmExports['emscripten_stack_get_base'] != 'undefined', 'missing Wasm export: emscripten_stack_get_base');
   assert(typeof wasmExports['htonl'] != 'undefined', 'missing Wasm export: htonl');
@@ -10564,6 +10605,7 @@ function assignWasmExports(wasmExports) {
   _Emscripten_HandleLockKeysCheck = Module['_Emscripten_HandleLockKeysCheck'] = createExportWrapper('Emscripten_HandleLockKeysCheck', 4);
   _Emscripten_SendSystemThemeChangedEvent = Module['_Emscripten_SendSystemThemeChangedEvent'] = createExportWrapper('Emscripten_SendSystemThemeChangedEvent', 0);
   _requestFullscreenThroughSDL = Module['_requestFullscreenThroughSDL'] = createExportWrapper('requestFullscreenThroughSDL', 1);
+  ___funcs_on_exit = createExportWrapper('__funcs_on_exit', 0);
   _emscripten_stack_get_end = wasmExports['emscripten_stack_get_end'];
   _emscripten_stack_get_base = wasmExports['emscripten_stack_get_base'];
   _htonl = createExportWrapper('htonl', 1);
@@ -11280,45 +11322,6 @@ function run(args = arguments_) {
     doRun();
   }
   checkStackCookie();
-}
-
-function checkUnflushedContent() {
-  // Compiler settings do not allow exiting the runtime, so flushing
-  // the streams is not possible. but in ASSERTIONS mode we check
-  // if there was something to flush, and if so tell the user they
-  // should request that the runtime be exitable.
-  // Normally we would not even include flush() at all, but in ASSERTIONS
-  // builds we do so just for this check, and here we see if there is any
-  // content to flush, that is, we check if there would have been
-  // something a non-ASSERTIONS build would have not seen.
-  // How we flush the streams depends on whether we are in SYSCALLS_REQUIRE_FILESYSTEM=0
-  // mode (which has its own special function for this; otherwise, all
-  // the code is inside libc)
-  var oldOut = out;
-  var oldErr = err;
-  var has = false;
-  out = err = (x) => {
-    has = true;
-  }
-  try { // it doesn't matter if it fails
-    _fflush(0);
-    // also flush in the JS FS layer
-    for (var name of ['stdout', 'stderr']) {
-      var info = FS.analyzePath('/dev/' + name);
-      if (!info) return;
-      var stream = info.object;
-      var rdev = stream.rdev;
-      var tty = TTY.ttys[rdev];
-      if (tty?.output?.length) {
-        has = true;
-      }
-    }
-  } catch(e) {}
-  out = oldOut;
-  err = oldErr;
-  if (has) {
-    warnOnce('stdio streams had content in them that was not flushed. you should set EXIT_RUNTIME to 1 (see the Emscripten FAQ), or make sure to emit a newline when you printf etc.');
-  }
 }
 
 var wasmExports;
