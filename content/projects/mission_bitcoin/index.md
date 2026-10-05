@@ -5,7 +5,7 @@ title = 'Mission Bitcoin'
 layout = 'isolated'
 +++
 
-<script src="enable-threads.js"></script>
+<!--script src="enable-threads.js"></script-->
 <style>
   body {
     background-color: black;
